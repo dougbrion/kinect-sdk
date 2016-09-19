@@ -1,0 +1,41 @@
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\WPFKinectSDK18.exe.config
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.csprojResolveAssemblyReference.cache
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\MainWindow.g.cs
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\App.g.cs
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18_MarkupCompile.cache
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18_MarkupCompile.lref
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\WPFKinectSDK18.exe
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\WPFKinectSDK18.pdb
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.dll
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.Toolkit.dll
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.Toolkit.Interaction.dll
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.xml
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\MainWindow.baml
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.g.resources
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.Properties.Resources.resources
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.csproj.GenerateResource.Cache
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.exe
+c:\users\aardv\documents\visual studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.pdb
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\WPFKinectSDK18.exe.config
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.exe
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.pdb
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\WPFKinectSDK18.exe
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\WPFKinectSDK18.pdb
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.dll
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.Toolkit.dll
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.Toolkit.Interaction.dll
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\Microsoft.Kinect.xml
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.csprojResolveAssemblyReference.cache
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\MainWindow.g.cs
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\App.g.cs
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18_MarkupCompile.cache
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18_MarkupCompile.lref
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\MainWindow.baml
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.g.resources
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.Properties.Resources.resources
+C:\Users\aardv\.repo\Documents\Visual Studio 2015\Projects\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.csproj.GenerateResource.Cache
+C:\Users\aardv\Google Drive\Coding\C_C++_C#\WPFKinectSDK18\WPFKinectSDK18\bin\Debug\WPFKinectSDK18.exe.config
+C:\Users\aardv\Google Drive\Coding\C_C++_C#\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.exe
+C:\Users\aardv\Google Drive\Coding\C_C++_C#\WPFKinectSDK18\WPFKinectSDK18\obj\Debug\WPFKinectSDK18.pdb
