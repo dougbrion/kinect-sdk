@@ -66,12 +66,12 @@ Then when the window loads we are going to start the Kinect Chooser to get the S
 C#
 private void MainWindowLoaded(object sender, RoutedEventArgs e)
 {
+    var sensorStatus = new KinectSensorChooser();
 
-var sensorStatus = new KinectSensorChooser();
+    sensorStatus.KinectChanged += KinectSensorChooserKinectChanged;
 
-sensorStatus.KinectChanged += KinectSensorChooserKinectChanged;
-
-kinectChooser.KinectSensorChooser = sensorStatus; sensorStatus.Start();
+    kinectChooser.KinectSensorChooser = sensorStatus;
+    sensorStatus.Start();
 
 }
 ```
@@ -83,33 +83,34 @@ C#
 private void KinectSensorChooserKinectChanged(object sender, KinectChangedEventArgs e)
 {
 
-if (sensor != null) sensor.SkeletonFrameReady -= KinectSkeletonFrameReady;
+    if (sensor != null)
+        sensor.SkeletonFrameReady -= KinectSkeletonFrameReady;
 
-sensor = e.NewSensor;
+    sensor = e.NewSensor;
 
-if (sensor == null) return;
+    if (sensor == null)
+        return;
 
-switch (Convert.ToString(e.NewSensor.Status))
+    switch (Convert.ToString(e.NewSensor.Status))
+    {
+        case "Connected": KinectStatus.Content = "Connected";
+            break;
+        case "Disconnected": KinectStatus.Content = "Disconnected";
+            break;
+        case "Error": KinectStatus.Content = "Error";
+            break;
+        case "NotReady": KinectStatus.Content = "Not Ready";
+            break;
+        case "NotPowered": KinectStatus.Content = "Not Powered";
+            break;
+        case "Initializing": KinectStatus.Content = "Initialising";
+            break;
+        default: KinectStatus.Content = "Undefined";
+            break;
+    }
 
-{
-
-case "Connected": KinectStatus.Content = "Connected"; break;
-
-case "Disconnected": KinectStatus.Content = "Disconnected"; break;
-
-case "Error": KinectStatus.Content = "Error"; break;
-
-case "NotReady": KinectStatus.Content = "Not Ready"; break;
-
-case "NotPowered": KinectStatus.Content = "Not Powered"; break;
-
-case "Initializing": KinectStatus.Content = "Initialising"; break;
-
-default: KinectStatus.Content = "Undefined"; break;
-
-}
-
-sensor.SkeletonStream.Enable(); sensor.SkeletonFrameReady += KinectSkeletonFrameReady;
+    sensor.SkeletonStream.Enable();
+    sensor.SkeletonFrameReady += KinectSkeletonFrameReady;
 
 }
 ```
@@ -120,59 +121,53 @@ Once we a tracking the Skeleton we can look for the X,Y and Z coordinates for sp
 C#
 private void KinectSkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs e)
 {
+    var skeletons = new Skeleton[0];
 
-var skeletons = new Skeleton[0];
+    using (var skeletonFrame = e.OpenSkeletonFrame())
+    {
+        if (skeletonFrame != null)
+        {
+            skeletons = new Skeleton[skeletonFrame.SkeletonArrayLength];
+            skeletonFrame.CopySkeletonDataTo(skeletons);
+        }
+    }
 
-using (var skeletonFrame = e.OpenSkeletonFrame())
+    if (skeletons.Length == 0)
+    {
+        return;
+    }
 
-{
+    var skel = skeletons.FirstOrDefault(x => x.TrackingState == SkeletonTrackingState.Tracked);
+    if (skel == null)
+    {
+        return;
+    }
 
-if (skeletonFrame != null)
+    var rightHand = skel.Joints[JointType.WristRight];
+    XValueRight.Text = rightHand.Position.X.ToString(CultureInfo.InvariantCulture);
+    YValueRight.Text = rightHand.Position.Y.ToString(CultureInfo.InvariantCulture);
+    ZValueRight.Text = rightHand.Position.Z.ToString(CultureInfo.InvariantCulture);
 
-{
+    var leftHand = skel.Joints[JointType.WristLeft];
+    XValueLeft.Text = leftHand.Position.X.ToString(CultureInfo.InvariantCulture);
+    YValueLeft.Text = leftHand.Position.Y.ToString(CultureInfo.InvariantCulture);
+    ZValueLeft.Text = leftHand.Position.Z.ToString(CultureInfo.InvariantCulture);
 
-skeletons = new Skeleton[skeletonFrame.SkeletonArrayLength]; skeletonFrame.CopySkeletonDataTo(skeletons);
+    var centreHip = skel.Joints[JointType.HipCenter];
 
-}
-
-}
-
-if (skeletons.Length == 0) { return; }
-
-var skel = skeletons.FirstOrDefault(x => x.TrackingState == SkeletonTrackingState.Tracked);
-
-if (skel == null) { return; }
-
-var rightHand = skel.Joints[JointType.WristRight]; XValueRight.Text = rightHand.Position.X.ToString(CultureInfo.InvariantCulture); YValueRight.Text = rightHand.Position.Y.ToString(CultureInfo.InvariantCulture); ZValueRight.Text = rightHand.Position.Z.ToString(CultureInfo.InvariantCulture);
-
-var leftHand = skel.Joints[JointType.WristLeft]; XValueLeft.Text = leftHand.Position.X.ToString(CultureInfo.InvariantCulture); YValueLeft.Text = leftHand.Position.Y.ToString(CultureInfo.InvariantCulture); ZValueLeft.Text = leftHand.Position.Z.ToString(CultureInfo.InvariantCulture);
-
-var centreHip = skel.Joints[JointType.HipCenter];
-
-if (centreHip.Position.Z - rightHand.Position.Z > 0.35)
-
-{
-
-RightRaised.Text = "Raised";
-
-}
-
-else if (centreHip.Position.Z - leftHand.Position.Z > 0.35)
-
-{
-
-LeftRaised.Text = "Raised";
-
-}
-
-else
-
-{
-
-LeftRaised.Text = "Lowered"; RightRaised.Text = "Lowered";
-
-}
-
+    if (centreHip.Position.Z - rightHand.Position.Z > 0.3)
+    {
+        RightRaised.Text = "Raised";
+    }
+    else if (centreHip.Position.Z - leftHand.Position.Z > 0.3)
+    {
+        LeftRaised.Text = "Raised";
+    }
+    else
+    {
+        LeftRaised.Text = "Lowered";
+        RightRaised.Text = "Lowered";
+    }
 }
 ```
 
