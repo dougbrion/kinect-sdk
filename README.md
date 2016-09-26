@@ -55,15 +55,13 @@ First make sure you have imported the Microsoft Kinect and Toolkit Libraries.
 
 In **MainWindow()** we activate the Kinect:
 
-```
-C#
+```csharp
 private KinectSensor sensor;
 ```
 
 Then when the window loads we are going to start the Kinect Chooser to get the Status of the kinect.
 
-```
-C#
+```csharp
 private void MainWindowLoaded(object sender, RoutedEventArgs e)
 {
     var sensorStatus = new KinectSensorChooser();
@@ -78,8 +76,7 @@ private void MainWindowLoaded(object sender, RoutedEventArgs e)
 
 The the label is updated by **KinectSensorChooserKinectChanged**, due to the switch we create in this function. Here also the Skeleton is initialised.
 
-```
-C#
+```csharp
 private void KinectSensorChooserKinectChanged(object sender, KinectChangedEventArgs e)
 {
 
@@ -117,8 +114,7 @@ private void KinectSensorChooserKinectChanged(object sender, KinectChangedEventA
 
 Once we a tracking the Skeleton we can look for the X,Y and Z coordinates for specific points on the skeleton. In this example we are after the coordinates of the hands of the user. We show the values as text in the window in our textblocks. We then compare the Z position of the users hip to the Z position of their hand. If it is over a certain threshold we are going to treat the users arm as being 'raised' and therefore print to the window which arm is up.
 
-```
-C#
+```csharp
 private void KinectSkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs e)
 {
     var skeletons = new Skeleton[0];
